@@ -1,0 +1,53 @@
+import React, { useEffect } from 'react'
+import { Container , Box , Text , Tabs , TabList , Tab , TabPanels , TabPanel} from "@chakra-ui/react"
+import Login from '../components/Authentication/Login';
+import Signup from '../components/Authentication/Signup';
+import { useHistory } from 'react-router';
+
+const Homepage = () => {
+
+    const history = useHistory();
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("userInfo"));
+
+        if(user) {
+            history.push("/chats")
+        }
+
+    },[history])
+
+    return (
+        <Container maxW='x-large' centerContent>
+        <Box 
+          display = "flex"
+          justifyContent = "center"
+          padding = {3}
+          bg={'white'}
+          w= "46%"
+          m= "40px 0px 15px 0px"
+          borderRadius= "5px"
+          borderWidth= "1px"
+          >
+            <Text fontSize='x-large' fontFamily='work sans' >Chit-Chat-Chew</Text>
+        </Box>
+        <Box bg="white" w='46%' p= {4} borderRadius='4px' borderWidth='1px' >
+            <Tabs variant='soft-rounded' >
+            <TabList mb ="1em">
+                <Tab width= "50%">Login</Tab>
+                <Tab width= "50%">Sign Up</Tab>
+            </TabList>
+            <TabPanels>
+                <TabPanel>
+                    <Login />
+                </TabPanel>
+                <TabPanel>
+                     <Signup />
+                </TabPanel>
+            </TabPanels>
+            </Tabs>
+        </Box>
+        </Container>
+    );
+}
+
+export default Homepage
