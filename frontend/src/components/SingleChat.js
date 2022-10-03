@@ -12,6 +12,7 @@ import ScrollableChat from './ScrollableChat';
 import io from 'socket.io-client';
 
 const ENDPOINT = "https://mern-chit-chat-chew.herokuapp.com/";
+// const ENDPOINT = "http://localhost:5000/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain , setFetchAgain }) => {
