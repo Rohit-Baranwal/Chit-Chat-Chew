@@ -12,7 +12,6 @@ const Chatpage = () => {
     const [fetchAgain, setFetchAgain] = useState();
     return (
         <div style = {{ width: "100% "}}>
-
             {user && <SideDrawer/>}
             <Box
              d ="flex"

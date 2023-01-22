@@ -17,24 +17,24 @@ const Homepage = () => {
     },[history])
 
     return (
-        <Container maxW='x-large' centerContent>
+        <Container maxW='xl' centerContent>
         <Box 
           display = "flex"
           justifyContent = "center"
           padding = {3}
           bg={'white'}
-          w= "46%"
+          w= "100%"
           m= "40px 0px 15px 0px"
-          borderRadius= "5px"
+          borderRadius= "lg"
           borderWidth= "1px"
           >
-            <Text fontSize='x-large' fontFamily='work sans' >Chit-Chat-Chew</Text>
+            <Text fontSize='4xl' fontFamily='work sans' >Chit-Chat-Chew</Text>
         </Box>
-        <Box bg="white" w='46%' p= {4} borderRadius='4px' borderWidth='1px' >
-            <Tabs variant='soft-rounded' >
+        <Box bg="white" w='100%' p= {4} borderRadius='lg' borderWidth='1px' >
+            <Tabs isFitted variant='soft-rounded' >
             <TabList mb ="1em">
-                <Tab width= "50%">Login</Tab>
-                <Tab width= "50%">Sign Up</Tab>
+                <Tab >Login</Tab>
+                <Tab >Sign Up</Tab>
             </TabList>
             <TabPanels>
                 <TabPanel>
@@ -50,4 +50,4 @@ const Homepage = () => {
     );
 }
 
-export default Homepage
+export default Homepage;
